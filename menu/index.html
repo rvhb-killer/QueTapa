@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link href="https://fonts.googleapis.com/css?family=Damion|Quicksand" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+</a>
+<div id="app">
+        <section id="specialssection" class="specials-container" v-if="menuItems_L" :style="menuStyle">
+            <div id="special_component" :style="menuStyle">
+                
+                <header class="main" id="back-to-top.">
+            <img src="images/Logo.png" alt="Logo for Que Tapa ">
+
+        </header>
+        <nav>
+            <div class="navi">
+            <ul>
+            <a href="../index.html">Home</a>
+            <a href="menu/index.html">Menu</a>
+            <a href="#">Order Online</a>
+            <a href="#">Gift Voucher</a>
+            <a href="#">Catering</a>
+            <a href="../contact/contact.html">Contact</a>
+            </ul>
+            </div>
+        </nav><h1>Menu</h1>
+              <h2>Tapas frias(koud)</h2>
+                <div class="specials-table-container">
+                    <table>
+                        <tbody v-for="item in menuItems_L" :key="`specialmenu-${item.name}`">
+                            <tr class="nameandprice">
+                                <td :style="dotStyle">
+                                    <span :style="menuStyle">{{item.name}}</span>
+                                </td>
+                                <td :style="dotStyle">
+                                    <span :style="menuStyle">€{{item.price}}</span>
+                                </td>
+                            </tr>
+                            <tr class="description">
+                                <td colspan="2">{{item.description}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <tbody v-for="item in menuItems_R" :key="`specialmenu-${item.name}`">
+                            <tr class="nameandprice">
+                                <td :style="dotStyle">
+                                    <span :style="menuStyle">{{item.name}}</span>
+                                </td>
+                                <td :style="dotStyle">
+                                    <span :style="menuStyle">€{{item.price}}</span>
+                                </td>
+                            </tr>
+                            <tr class="description">
+                                <td colspan="2">{{item.description}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h1>Tapas calientes (warm)</h1>
+                <div class="specials-table-container">
+                    <table>
+                        <tbody v-for="item in menuItems_L" :key="`specialmenu-${item.name}`">
+                            <tr class="nameandprice">
+                                <td :style="dotStyle">
+                                    <span :style="menuStyle">{{item.name}}</span>
+                                </td>
+                                <td :style="dotStyle">
+                                    <span :style="menuStyle">€{{item.price}}</span>
+                                </td>
+                            </tr>
+                            <tr class="description">
+                                <td colspan="2">{{item.description}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h1>Tapas frias (koud)</h1>
+                    <table>
+                        <tbody v-for="item in menuItems_R" :key="`specialmenu-${item.name}`">
+                            <tr class="nameandprice">
+                                <td :style="dotStyle">
+                                    <span :style="menuStyle">{{item.name}}</span>
+                                </td>
+                                <td :style="dotStyle">
+                                    <span :style="menuStyle">€{{item.price}}</span>
+                                </td>
+                            </tr>
+                            <tr class="description">
+                                <td colspan="2">{{item.description}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

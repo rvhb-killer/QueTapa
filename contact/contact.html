@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que Tapa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <header class="main" id="back-to-top.">
+        <img id="topimg" src="../images/logo.png" alt="Logo for Que Tapa ">
+    </header>
+    <nav>
+        <div class="navi">
+            <ul>
+                <a href="../index.html">Home</a>
+                <a href="../menu/index.html">Menu</a>
+                <a href="#">Order Online</a>
+                <a href="#">Recepte boekje</a>
+                <a href="#">Catering</a>
+                <a href="#">Contact</a>
+            </ul>
+        </div>
+    </nav>
+    <h1 id="contact">Contact Formulier</h1>
+    <p id="contactw">huren??? dan bent u hier aan het juiste adres. Wij zijn ook op zoek naar gemotiveerde jobstudenten die ons team kunnen versterken.</p>
+    <form method="post" action="">
+        <label for="voornaam">Voornaam*</label>
+        <input type="text" name="voornaam" id="voornaam" required>
+        <label for="familienaam">Familienaam*</label>
+        <input type="text" name="familienaam" id="familienaam" required>
+        <label for="email">E-mailadres*</label>
+        <input type="email" name="email" id="email" required>
+        <span class="error" id="email-error"></span>
+        <label for="telefoonnummer">Telefoonnummer</label>
+        <input type="tel" name="telefoonnummer" id="telefoonnummer">
+        <span class="error" id="tel-error"></span>
+        <label for="bericht">Bericht*</label>
+        <textarea name="bericht" id="bericht" required></textarea>
+        <input type="submit" value="Verzenden">
+    </form>
+    <script>
+    const emailInput = document.getElementById("email");
+    const telInput = document.getElementById("telefoonnummer");
+    const emailError = document.getElementById("email-error");
+    const telError = document.getElementById("tel-error");
+
+    emailInput.addEventListener("input", () => {
+        if (emailInput.validity.valid) {
+            emailError.textContent = "";
+            emailError.className = "error";
+        } else {
+            emailError.textContent = "Voer een geldig e-mailadres in";
+            emailError.className = "error active";
+        }
+    });
+
+    telInput.addEventListener("input", () => {
+        if (telInput.validity.valid) {
+            telError.textContent = "";
+            telError.className = "error";
+        } else {
+            telError.textContent = "Voer een geldig telefoonnummer in";
+            telError.className = "error active";
+        }
+    });
+    </script>
+</body>
+
+</html>
