@@ -9,6 +9,10 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.1/smooth-scrollbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -20,7 +24,8 @@
 </head>
 
 <body>
-    <div class="wrapper">
+<div id="body-inner" class="smooth-scrollbar">
+        <div class="wrapper">
         <div class="overlay">
             <div class="overlay__intro">
                 <p class="para">Que Tapa</p>
@@ -32,7 +37,7 @@
         </div>
     </div>
     <header class="main" id="back-to-top">
-        <img id="topimg" src="images/Logo.png" alt="Logo for Que Tapa"></img>
+        <img id="topimg" src="images/logo.png" alt="Logo for Que Tapa"></img>
     </header>
     <nav class="navbar navbar-inverse">
         <div class="container">
@@ -62,7 +67,8 @@
 </div>
 
 
-    </main> 
+    </main>
+</div>
 <div>     
     <div class="footer-gallery">
     <h3>Photo Gallery</h3>
@@ -117,10 +123,9 @@
             </div>
         </div>
     </footer>
-    <div id="back-to-top" class="back-to-top">
-        <button class="btn btn-dark" title="Back to Top" style="display: block;">
-            <i class="fa fa-angle-up"></i>
-        </button>
+    <div id="but">
+    <a href="#" class="scroll-to-top">Back to Top</a>
+  </div>
     </div>
 </body>
 
