@@ -3237,8 +3237,6 @@ blockquote {
     font-family: Regular,sans-serif;
     font-size: 80px;
     line-height: 100px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
 }
 
 .div-block-header-image-2 {
