@@ -8,7 +8,9 @@ $(document).ready(function() {
     tlIntro.to('.overlay_intro', 0.5, { opacity: 0, onComplete: removeOverlay });
 
     function removeOverlay() {
-        $('.overlay').remove();
+        $('.overlay').fadeOut('slow', function() {
+            $(this).remove();
+        });
     }
 
     $(".header__cta").mouseenter(function() {
@@ -31,4 +33,22 @@ $(document).ready(function() {
             // Add your scroll-related code here
         });
     });
-  });
+
+    $(window).scroll(function() {
+        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $('.header_text-move').each(function() {
+            var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+            // Adjust the value below (0.8) to control when the fade-in effect starts
+            if (objectBottom < windowBottom * 0.8) {
+                if (!$(this).hasClass('visible')) {
+                    $(this).addClass('visible');
+                }
+            } else {
+                if ($(this).hasClass('visible')) {
+                    $(this).removeClass('visible');
+                }
+            }
+        });
+    });
+});
