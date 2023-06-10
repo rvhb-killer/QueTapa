@@ -4170,7 +4170,13 @@ blockquote {
         margin: auto;
     }
 
-    .menu-items {
+    
+
+@media screen and (max-width: 767px) {
+    .text-block {
+        font-size: 15px
+    }
+   .menu-items {
         background-color: black;
         position: relative;
         z-index: 1;
@@ -4446,11 +4452,6 @@ blockquote {
         right: auto
     }
 }
-
-@media screen and (max-width: 767px) {
-    .text-block {
-        font-size: 15px
-    }
 
     .navigation-bar {
         padding-left: 10px;
