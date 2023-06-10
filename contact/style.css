@@ -3888,7 +3888,11 @@ vw}
 
 @media screen and (max-width: 991px) {
     
-.navbar12{
+
+}
+
+@media screen and (max-width: 767px) {
+    .navbar12{
 
     display: block;
     }
@@ -4180,9 +4184,6 @@ vw}
         left: 0%;
         right: auto
     }
-}
-
-@media screen and (max-width: 767px) {
     .text-block {
         font-size:15px
     }
